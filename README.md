@@ -54,7 +54,7 @@ Once this completes, the newly generated HEX file can be then flashed onto the m
 The micro-controller is now ready for use as a controller for the Switch! Simply connect the micro-controller to the Switch through the USB ports (or into the USB-C port through an adapter), and will begin the scripted commands momentarily after.
 
 ## In Conclusion...
-This project would not be possible without the groundwork laid out by the Switch hacking community on Github, especially shinyquagsire23 and bertrandom. Their work has provided the means for how to properly communicate with the Switch via USB, as well as a way to communicate automated inputs through iterative lists. If you have any questions or concerns, please feel free to create an issue on this repo page.
+This project would not be possible without the groundwork laid out by the Switch hacking community on GitHub, especially [shinyquagsire23](https://github.com/shinyquagsire23/Switch-Fightstick) and [bertrandom](https://github.com/bertrandom/snowball-thrower). Their work has provided the means for how to properly communicate with the Switch via USB, as well as a way to communicate automated inputs through iterative lists. If you have any questions or concerns, please feel free to create an issue on this repo page.
 
 
 
