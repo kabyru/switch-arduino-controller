@@ -22,7 +22,7 @@ exception of Home and Capture. Descriptor modification allows us to unlock
 these buttons for our use.
 */
 
-// This iteration of this program is to provide accessiblity to those wishing to create their own custom Switch controller scripted programs 
+// This purpose of this program is to provide accessiblity to those wishing to create their own custom Switch controller scripted programs 
 // that will run on Arduino and Teensy devices.
 // Any questions or issues can be posted on the GitHub Repo's Issue Forum.
 
@@ -48,7 +48,7 @@ typedef enum {
 	LCLICK,
 	RCLICK,
 	NOTHING,
-	TRIGGERS
+	BUMPERS
 } Buttons_t;
 
 typedef struct {
@@ -58,20 +58,19 @@ typedef struct {
 
 
 
-/////////////////////////////////MOST PEOPLE ONLY NEED TO MODIFY CODE IN THIS BLOCK. MAIN LOOP BEGINS AFTER LINE 64.///////////////
+/////////////////////////////////MOST PEOPLE ONLY NEED TO MODIFY CODE IN THIS BLOCK. MAIN LOOP BEGINS AFTER LINE 63.///////////////
 static const command step[] = {
 	// Setup controller
 	{ NOTHING,  250 },
-	{ TRIGGERS,   5 },
+	{ BUMPERS,   5 },
 	{ NOTHING,  150 },
-	{ TRIGGERS,   5 },
+	{ BUMPERS,   5 },
 	{ NOTHING,  150 },
 	{ A,          5 },
 	{ NOTHING,  250 },
 
 	// ***Begin loop of commands below this line***
-	{ HOME,  5 }, //Example
-	{ NOTHING, 250 }
+	{NOTHING, 250} //Just a dummy command. Can delete.
 
 };
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -333,7 +332,7 @@ void GetNextReport(USB_JoystickReport_Input_t* const ReportData) {
 					ReportData->Button |= SWITCH_CAPTURE;
 					break;
 
-				case TRIGGERS:
+				case BUMPERS:
 					ReportData->Button |= SWITCH_L | SWITCH_R;
 					break;
 
